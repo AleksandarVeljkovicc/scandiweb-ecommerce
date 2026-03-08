@@ -17,8 +17,8 @@
 
 - React Router DOM ^7.6.0
 # Run the app
-Before running the app, make sure you have PHP, Composer, Node.js, and npm installed on your system. Then, install the backend dependencies by running cd backend and composer install, set up a MySQL database and configure your backend\src\Config\Database.php with the correct credentials. Finally, navigate to the frontend directory with cd ../frontend and install all required packages using npm install.
-Once all dependencies are installed and the environment is configured, navigate to the backend directory and start the backend server using php -S localhost:8000 -t public. Then, switch to the frontend directory and run npm run dev to start the React development server.
+Before running the app, make sure you have PHP, Composer, Node.js, and npm installed on your system. Then, install the backend dependencies by running cd server and composer install, set up a MySQL database and configure your server\src\Config\Database.php with the correct credentials. Finally, navigate to the client directory with cd ../client and install all required packages using npm install.
+Once all dependencies are installed and the environment is configured, navigate to the server directory and start the backend server using php -S localhost:8000 -t public. Then, switch to the client directory and run npm run dev to start the React development server.
 
 
 <img width="1919" height="906" alt="Screenshot_82" src="https://github.com/user-attachments/assets/6701bae6-befc-43c8-8e1e-67b769be6e39" />
