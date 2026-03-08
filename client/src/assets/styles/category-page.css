@@ -1,0 +1,131 @@
+:root {
+  --accent-green: #34c779;
+}
+
+.category-main {
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: calc(2rem + 25px);
+  margin-bottom: calc(2rem + 25px);
+  text-align: left;
+  color: #000;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card.selected,
+.product-card:hover {
+  border: 2px solid var(--accent-green);
+  box-shadow: 0 0 0 2px #fff inset;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;            
+  overflow: hidden;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  background-color: #fff; 
+}
+
+.product-card.out-of-stock .product-image {
+  opacity: 0.3;
+}
+
+.out-of-stock-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8d8f9a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.cart-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #74C95B;
+  color: #fff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cart-btn .cart-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+
+.product-card:hover .cart-btn,
+.product-card.selected .cart-btn {
+  display: flex;
+}
+
+.product-name {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.product-price {
+  font-weight: 600;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.product-name,
+.product-price {
+  text-align: center; 
+}
+
+
+@media (max-width: 1024px) {
+  .product-grid {
+    display: flex;        
+    flex-direction: column;
+    align-items: center;  
+    gap: 2rem;            
+  }
+
+  .product-card {
+    width: 90%;           
+  }
+}

@@ -1,0 +1,159 @@
+:root { 
+  --accent-green: #34c779; 
+} 
+ 
+.main-header { 
+  position: fixed;          
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 70px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  background-color: #fff;    
+  padding: 0 2rem; 
+  box-sizing: border-box; 
+  z-index: 101;             
+} 
+ 
+.header-left { 
+  display: flex; 
+  gap: 2rem; 
+  height: 100%;
+  align-items: center;
+} 
+
+.category-nav {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  align-items: stretch;
+}
+
+.category-nav-link {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: #1d1f22;
+  cursor: pointer;
+}
+
+.category-nav-link:hover {
+  color: #74C95B;
+}
+
+.category-nav-link.active {
+  color: #74C95B;
+}
+
+.category-nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #74C95B;
+}
+ 
+.header-middle-icon {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.header-center { 
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%); 
+} 
+ 
+.logo-bag { 
+  width: 34px; 
+  height: 34px; 
+  background-color: var(--accent-green); 
+  border-radius: 4px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
+ 
+.logo-bag svg { 
+  font-size: 1rem; 
+  color: #fff; 
+} 
+
+.header-right { 
+  display: flex; 
+  align-items: center; 
+} 
+ 
+.cart-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+} 
+ 
+.cart-icon-wrapper { 
+  position: relative; 
+  cursor: pointer; 
+} 
+ 
+.cart-count { 
+  position: absolute; 
+  top: -6px; 
+  right: -10px; 
+  background: #000; 
+  color: #fff; 
+  font-size: 0.75rem; 
+  border-radius: 9999px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+} 
+ 
+.header-spacer {
+  height: 50px; 
+  width: 100%;
+}
+
+
+@media (max-width: 1024px) {
+  .header-middle-icon {
+    height: 32px;
+  }
+
+  .category-nav {
+    gap: 1.25rem;
+  }
+
+  .category-nav-link {
+    font-size: 0.95rem;
+  }
+
+  .header-center {
+    position: static;
+    transform: none;
+    display: flex;
+    align-items: center;
+  }
+}
