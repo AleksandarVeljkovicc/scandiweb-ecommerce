@@ -1,13 +1,11 @@
-# AlexStore
-A simple mobile/tablet-friendly e-commerce app that allows users to log in, register, and order products, handling user authentication with JWTs stored in cookies and a 'Remember Me' option to keep users logged in across sessions.
+# Scandiweb-eCommerce
+
 ## Technologies
 **Backend:**
 - PHP 8+
 
 - GraphQL (webonyx/graphql-php) ^15.2
-
-- JWT Authentication (firebase/php-jwt) ^6.11
-
+- 
 - MySQL Database
   
 **Frontend:**
